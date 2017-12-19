@@ -70,6 +70,7 @@ namespace JigglyBot.Modules
         [Command("Could_I_be_the_one")]
         public async Task Could_I_be_the_one()
         {
+<<<<<<< HEAD
             int pick = rnd.Next(0,2);
             if (pick == 1){
               await Context.Channel.SendMessageAsync("You COULD be the one");
@@ -78,8 +79,16 @@ namespace JigglyBot.Modules
             else{
               await Context.Channel.SendMessageAsync("You could not be the one :(");
 
-            }
+=======
+            int pick = rnd.Next(0,2)
+            if ( pick == 1){
+              await Context.Channel.SendMessageAsync("You COULD be the one")
 
+            }
+            else{
+              await Context.Channel.SendMessageAsync("You could not be the one :(")
+>>>>>>> 9b8d20597a1469db10abf4b52f66f25530b0bb90
+            }
         }
     }
 }
