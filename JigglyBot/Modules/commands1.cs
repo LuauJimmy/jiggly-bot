@@ -66,34 +66,20 @@ namespace JigglyBot.Modules
             await Context.Channel.SendMessageAsync("Your balance is $" + users[Context.User.Id]);
         }
 
-        [Command("listall")]
-        public async Task listbalances()
-        {
-        [Command("adduser")]
-        public async Task adduser(SocketGuildUser user)
-        {
-            users.Add(user.Id, 0);
 
-            await Context.Channel.SendMessageAsync("Added " + user + "!");
-        }
         [Command("Could_I_be_the_one")]
         public async Task Could_I_be_the_one()
         {
-            int pick = rnd.Next(1,2)
-            if ( pick == 1){
-              await Context.Channel.SendMessageAsync("You COULD be the one")
+            int pick = rnd.Next(0,2);
+            if (pick == 1){
+              await Context.Channel.SendMessageAsync("You COULD be the one");
 
             }
             else{
-              await Context.Channel.SendMessageAsync("You could not be the one :(")
+              await Context.Channel.SendMessageAsync("You could not be the one :(");
 
             }
 
-        }
-
-            StringBuilder _out = new StringBuilder();
-            _out.Append(users.Keys);
-            await Context.Channel.SendMessageAsync(_out.ToString());
         }
     }
 }

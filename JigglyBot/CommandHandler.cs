@@ -34,6 +34,12 @@ namespace JigglyBot
             var context = new SocketCommandContext(_client, msg);
 
             int argPos = 0;
+
+            if (msg.HasStringPrefix("dota", ref argPos))
+            {
+                await context.Channel.SendMessageAsync("Dotard");
+            }
+
             if (msg.HasCharPrefix('!', ref argPos))
             {
                 var result = await _service.ExecuteAsync(context, argPos);
