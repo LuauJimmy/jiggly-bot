@@ -79,7 +79,7 @@ namespace JigglyBot.Modules
         [Command("Could_I_be_the_one")]
         public async Task Could_I_be_the_one()
         {
-            int pick = rnd.Next(1,2)
+            int pick = rnd.Next(0,2)
             if ( pick == 1){
               await Context.Channel.SendMessageAsync("You COULD be the one")
 
