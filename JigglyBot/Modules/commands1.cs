@@ -30,11 +30,11 @@ namespace JigglyBot.Modules
 
             for (int i = 0; i < scores.Length; i++)
             {
-                _out.Append(i + 1 + ": " + scores[i] + "\n");    
+                _out.Append(i + 1 + ": " + scores[i] + "\n");
             }
 
             await Context.Channel.SendMessageAsync(_out.ToString());
-  
+
         }
 
         [Command("surfmebutthole")]
@@ -59,7 +59,7 @@ namespace JigglyBot.Modules
 
             await Context.Channel.SendMessageAsync("Added " + user + "!");
         }
-        
+
         [Command("bal")]
         public async Task checkbalance()
         {
@@ -69,6 +69,27 @@ namespace JigglyBot.Modules
         [Command("listall")]
         public async Task listbalances()
         {
+        [Command("adduser")]
+        public async Task adduser(SocketGuildUser user)
+        {
+            users.Add(user.Id, 0);
+
+            await Context.Channel.SendMessageAsync("Added " + user + "!");
+        }
+        [Command("Could_I_be_the_one")]
+        public async Task Could_I_be_the_one()
+        {
+            int pick = rnd.Next(1,2)
+            if ( pick == 1){
+              await Context.Channel.SendMessageAsync("You COULD be the one")
+
+            }
+            else{
+              await Context.Channel.SendMessageAsync("You could not be the one :(")
+
+            }
+
+        }
 
             StringBuilder _out = new StringBuilder();
             _out.Append(users.Keys);
