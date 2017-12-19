@@ -86,9 +86,7 @@ namespace JigglyBot.Modules
             }
             else{
               await Context.Channel.SendMessageAsync("You could not be the one :(")
-
             }
-
         }
 
             StringBuilder _out = new StringBuilder();
